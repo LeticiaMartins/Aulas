@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+
+    <html  dir="ltr" lang="pt-br" xml:lang="pt-br">
+    <head>
+        <title>0718FSPCN03O: Instruções iniciais - Organização do projeto</title>
+        <link rel="shortcut icon" href="https://digitalhousebr.tucampus.org/theme/image.php/moove/theme/1523386492/favicon" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, 0718FSPCN03O: Instruções iniciais - Organização do projeto" />
+<link rel="stylesheet" type="text/css" href="https://digitalhousebr.tucampus.org/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://digitalhousebr.tucampus.org/theme/styles.php/moove/1523386492_1/all" />
+<script type="text/javascript">
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/digitalhousebr.tucampus.org","sesskey":"cBZHUD5JjW","themerev":"1523386492","slasharguments":1,"theme":"moove","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1522247947","admin":"admin","svgicons":true,"usertimezone":"Am\u00e9rica\/Argentina\/Buenos_Aires","contextid":5474,"developerdebug":true};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":true,"base":"https:\/\/digitalhousebr.tucampus.org\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/digitalhousebr.tucampus.org\/theme\/yui_combo.php?","combine":true,"filter":"RAW","insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/digitalhousebr.tucampus.org\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/digitalhousebr.tucampus.org\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/digitalhousebr.tucampus.org\/theme\/yui_combo.php?m\/1522247947\/","combine":true,"comboBase":"https:\/\/digitalhousebr.tucampus.org\/theme\/yui_combo.php?","ext":false,"root":"m\/1522247947\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":"DEBUG","modules":{"moodle-core-checknet":{"requires":["base-base","moodle-core-notification-alert","io-base"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-dock":{"requires":["base","node","event-custom","event-mouseenter","event-resize","escape","moodle-core-dock-loader","moodle-core-event"]},"moodle-core-dock-loader":{"requires":["escape"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-modchooser":{"requires":["moodle-core-chooserdialogue","moodle-course-coursebase"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-form-showadvanced":{"requires":["node","base","selector-css3"]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-qbankmanager":{"requires":["node","selector-css3"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-qtype_ddimageortext-form":{"requires":["moodle-qtype_ddimageortext-dd","form_filepicker"]},"moodle-qtype_ddimageortext-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-qtype_ddmarker-form":{"requires":["moodle-qtype_ddmarker-dd","form_filepicker","graphics","escape"]},"moodle-qtype_ddmarker-dd":{"requires":["node","event-resize","dd","dd-drop","dd-constrain","graphics"]},"moodle-qtype_ddwtos-dd":{"requires":["node","dd","dd-drop","dd-constrain"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_forum-subscriptiontoggle":{"requires":["base-base","io-base"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-randomquestion":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-repaginate":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_quiz-quizquestionbank":{"requires":["base","event","node","io","io-form","yui-later","moodle-question-qbankmanager","moodle-core-notification-dialogue"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_generico-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-button":{"requires":["moodle-editor_atto-plugin","event-valuechange"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_poodll-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_preview-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wordimport-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/digitalhousebr.tucampus.org\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/digitalhousebr.tucampus.org\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1522247947\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/digitalhousebr.tucampus.org\/lib\/javascript.php\/1522247947\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/digitalhousebr.tucampus.org\/lib\/javascript.php\/1522247947\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.2\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    </head>
+    
+    <body  id="page-mod-page-view" class="format-onetopic  path-mod path-mod-page safari dir-ltr lang-pt_br yui-skin-sam yui3-skin-sam digitalhousebr-tucampus-org pagelayout-incourse course-13 context-5474 cmid-1447 category-5 ">
+    
+    <div id="page-wrapper">
+    
+        <div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Ir para o conteúdo principal</a>
+</div><script type="text/javascript" src="https://digitalhousebr.tucampus.org/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple.js"></script><script type="text/javascript" src="https://digitalhousebr.tucampus.org/lib/javascript.php/1522247947/lib/javascript-static.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+    
+        <header role="banner" class="pos-f-t navbar navbar-full bg-faded navbar-static-top moodle-has-zindex">
+        
+            <div class="container-fluid navbar-nav">
+        
+                <a href="https://digitalhousebr.tucampus.org" class="navbar-brand has-logo
+                        ">
+                        <span class="logo hidden-xs-down">
+                            <img src="//digitalhousebr.tucampus.org/pluginfile.php/1/theme_moove/logo/1523386492/logo.png" alt="Digital">
+                        </span>
+                </a>
+        
+                <ul class="navbar-nav hidden-md-down navbar-custom-menu">
+                        <li data-region="drawer-toggle" class="nav-item drawer-toggle">
+                            <a
+                                href="javascript:void(0)"
+                                aria-expanded="false"
+                                aria-controls="nav-drawer"
+                                class="sidebartoggler hidden-sm-down text-muted"
+                                data-action="toggle-drawer"
+                                data-side="left"
+                                data-preference="drawer-open-nav">
+                                    <i class="icon-menu" aria-hidden="true"></i><span class="sr-only">Painel lateral</span>
+                            </a>
+                        </li>
+                    <!-- custom_menu -->
+                    
+                    <!-- page_heading_menu -->
+                    
+                </ul>
+        
+                <ul class="navbar-nav popover-menu-items">
+                    <li class="popover-region">
+                        
+                    </li>
+        
+                    <!-- navbar_plugin_output -->
+                    <li class="popover-region collapsed popover-region-messages"
+    id="nav-message-popover-container" data-userid="466"
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link"
+        data-region="popover-region-toggle"
+        aria-role="button"
+        aria-controls="popover-region-container-5b860a3b3249c5b860a3b31a042"
+        aria-haspopup="true"
+        aria-label="Mostrar janela de mensagens sem as novas mensagens"
+        tabindex="0">
+                <i class="icon-envelope" title="Alternar menu de mensagens"></i>
+        <div class="count-container hidden" data-region="count-container"></div>
+
+    </div>
+    <div 
+        id="popover-region-container-5b860a3b3249c5b860a3b31a042"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Janela de notificação"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Mensagens</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <div class="newmessage-link">
+                <a href="https://digitalhousebr.tucampus.org/message/index.php?contactsfirst=1">Nova Mensagem
+                </a>
+        </div>
+        <div class="hover-tooltip-container">
+                    <a class="mark-all-read-button"
+                    href="#"
+                    role="button"
+                    title="Marcar tudo como lido"
+                    data-action="mark-all-read">
+                    <span class="normal-icon"><i class="icon-check" alt="Marcar tudo como lido"></i></span>
+                    <span class="loading-icon"><img class="icon " alt="Carregando" title="Carregando" src="https://digitalhousebr.tucampus.org/theme/image.php/moove/core/1523386492/y/loading" /></span>
+                </a>
+
+    <div class="hover-tooltip">
+        Marcar tudo como lido
+    </div>
+</div>
+        <div class="hover-tooltip-container">
+                    <a href="https://digitalhousebr.tucampus.org/message/edit.php?id=466"
+                    title="Preferências de mensagens">
+                    <i class="icon-settings" alt="Preferências de mensagens"></i>
+                </a>
+
+    <div class="hover-tooltip">
+        Preferências de mensagens
+    </div>
+</div>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="messages" data-region="messages" role="log" aria-busy="false" aria-atomic="false" aria-relevant="additions"></div>
+        <div class="empty-message" data-region="empty-message" tabindex="0">Sem novas mensagens</div>
+
+            </div>
+            <span class="loading-icon"><img class="icon " alt="Carregando" title="Carregando" src="https://digitalhousebr.tucampus.org/theme/image.php/moove/core/1523386492/y/loading" /></span>
+        </div>
+                <a class="see-all-link"
+                    href="https://digitalhousebr.tucampus.org/message/index.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">Mostrar todos</div>
+                    </div>
+                </a>
+    </div>
+</li><li class="popover-region collapsed popover-region-notifications"
+    id="nav-notification-popover-container" data-userid="466"
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link"
+        data-region="popover-region-toggle"
+        aria-role="button"
+        aria-controls="popover-region-container-5b860a3b329e85b860a3b31a043"
+        aria-haspopup="true"
+        aria-label="Mostrar janela de notificações sem as novas notificações"
+        tabindex="0">
+                <i class="icon-bell" title="Alternar menu de notificações"></i>
+        <div class="count-container hidden" data-region="count-container"></div>
+
+    </div>
+    <div 
+        id="popover-region-container-5b860a3b329e85b860a3b31a043"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Janela de notificação"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Notificações</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <div class="hover-tooltip-container">
+                    <a class="mark-all-read-button"
+                    href="#"
+                    title="Marcar tudo como lido"
+                    data-action="mark-all-read"
+                    role="button">
+                    <span class="normal-icon"><i class="icon-check" alt="Marcar tudo como lido"></i></span>
+                    <span class="loading-icon"><img class="icon " alt="Carregando" title="Carregando" src="https://digitalhousebr.tucampus.org/theme/image.php/moove/core/1523386492/y/loading" /></span>
+                </a>
+
+    <div class="hover-tooltip">
+        Marcar tudo como lido
+    </div>
+</div>
+        <div class="hover-tooltip-container">
+                    <a href="https://digitalhousebr.tucampus.org/message/notificationpreferences.php?userid=466"
+                    title="Preferências de notificação">
+                    <i class="icon-settings" alt="Preferências de notificação"></i>
+                </a>
+
+    <div class="hover-tooltip">
+        Preferências de notificação
+    </div>
+</div>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="all-notifications"
+            data-region="all-notifications"
+            role="log"
+            aria-busy="false"
+            aria-atomic="false"
+            aria-relevant="additions"></div>
+        <div class="empty-message" tabindex="0" data-region="empty-message">Você não tem nenhuma notificação</div>
+
+            </div>
+            <span class="loading-icon"><img class="icon " alt="Carregando" title="Carregando" src="https://digitalhousebr.tucampus.org/theme/image.php/moove/core/1523386492/y/loading" /></span>
+        </div>
+                <a class="see-all-link"
+                    href="https://digitalhousebr.tucampus.org/message/output/popup/notifications.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">Mostrar todos</div>
+                    </div>
+                </a>
+    </div>
+</li>
+        
+                    <!-- user_menu -->
+                    <li class="usermenu"><div class="action-menu moodle-actionmenu nowrap-items" id="action-menu-1" data-enhance="moodle-core-actionmenu">
+
+        <div class="menubar" id="action-menu-1-menubar" role="menubar">
+
+            <div class="dropdown d-inline">
+    <a href="#" class="dropdown-toggle" id="dropdown-1" title="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="userbutton"><span class="usertext"></span><span class="avatars"><span class="avatar current"><img src="https://digitalhousebr.tucampus.org/theme/image.php/moove/core/1523386492/u/f2" alt="Imagem de Letícia Pascale" title="Imagem de Letícia Pascale" class="userpicture defaultuserpic" width="35" height="35" role="presentation" /></span></span></span><b class="caret"></b></a>
+        <div class="dropdown-menu dropdown-menu-right menu  align-tr-br" id="action-menu-1-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-1" role="menu" data-align="tr-br">
+            <a href="https://digitalhousebr.tucampus.org/user/profile.php?id=466" class="dropdown-item text-username menu-action" role="menuitem" aria-labelledby="actionmenuaction-1"><i class="icon fa icon-user fa-fw " aria-hidden="true" title="Letícia Pascale" aria-label="Letícia Pascale"></i><span class="menu-action-text" id="actionmenuaction-1">Letícia Pascale</span></a><div class="dropdown-divider"></div><a href="https://digitalhousebr.tucampus.org/my/" class="dropdown-item menu-action" role="menuitem" data-title="mymoodle,admin" aria-labelledby="actionmenuaction-2"><i class="icon fa icon-speedometer fa-fw " aria-hidden="true" title="Painel" aria-label="Painel"></i><span class="menu-action-text" id="actionmenuaction-2">Painel</span></a><a href="https://digitalhousebr.tucampus.org/user/profile.php?id=466" class="dropdown-item menu-action" role="menuitem" data-title="profile,moodle" aria-labelledby="actionmenuaction-3"><i class="icon fa icon-user fa-fw " aria-hidden="true" title="Perfil" aria-label="Perfil"></i><span class="menu-action-text" id="actionmenuaction-3">Perfil</span></a><a href="https://digitalhousebr.tucampus.org/grade/report/overview/index.php" class="dropdown-item menu-action" role="menuitem" data-title="grades,grades" aria-labelledby="actionmenuaction-4"><i class="icon fa icon-book-open fa-fw " aria-hidden="true" title="Notas" aria-label="Notas"></i><span class="menu-action-text" id="actionmenuaction-4">Notas</span></a><a href="https://digitalhousebr.tucampus.org/message/index.php" class="dropdown-item menu-action" role="menuitem" data-title="messages,message" aria-labelledby="actionmenuaction-5"><i class="icon fa icon-bubble fa-fw " aria-hidden="true" title="Mensagens" aria-label="Mensagens"></i><span class="menu-action-text" id="actionmenuaction-5">Mensagens</span></a><a href="https://digitalhousebr.tucampus.org/user/preferences.php" class="dropdown-item menu-action" role="menuitem" data-title="preferences,moodle" aria-labelledby="actionmenuaction-6"><i class="icon fa icon-wrench fa-fw " aria-hidden="true" title="Preferências" aria-label="Preferências"></i><span class="menu-action-text" id="actionmenuaction-6">Preferências</span></a><div class="dropdown-divider"></div><a href="https://digitalhousebr.tucampus.org/login/logout.php?sesskey=cBZHUD5JjW" class="dropdown-item menu-action" role="menuitem" data-title="logout,moodle" aria-labelledby="actionmenuaction-7"><i class="icon fa icon-logout fa-fw " aria-hidden="true" title="Sair" aria-label="Sair"></i><span class="menu-action-text" id="actionmenuaction-7">Sair</span></a>
+        </div>
+</div>
+
+
+        </div>
+
+</div></li>
+                </ul>
+        
+                <!-- search_box -->
+                <span class="hidden-md-down">
+                  
+                </span>
+            </div>
+        </header>
+
+    <div id="page" class="container-fluid">
+        <header id="page-header" class="row"><div class="col-xs-12 p-a-1"><div class="card"><div class="card-block"><div class="pull-xs-right context-header-settings-menu"></div><div class="pull-xs-left"><div class="page-context-header"><div class="page-header-headings"><h1>Full Stack TN3 - Campus Vila Olimpia</h1></div></div></div><div class="clearfix w-100 pull-xs-left" id="page-navbar"><div class="breadcrumb-nav"><nav role="navigation">
+    <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="https://digitalhousebr.tucampus.org/my/" >Painel</a></li>
+                <li class="breadcrumb-item"><span class="no-link">Meus cursos</span></li>
+                <li class="breadcrumb-item"><a href="https://digitalhousebr.tucampus.org/course/view.php?id=13" title="Full Stack TN3 - Campus Vila Olimpia">0718FSPCN03O</a></li>
+                <li class="breadcrumb-item"><a href="https://digitalhousebr.tucampus.org/course/view.php?id=13&amp;section=12" >Aula 11 - Projeto Integrador</a></li>
+                <li class="breadcrumb-item"><a href="https://digitalhousebr.tucampus.org/mod/page/view.php?id=1447" title="Página">Instruções iniciais - Organização do projeto</a></li>
+    </ol>
+</nav></div><div class="breadcrumb-button pull-xs-right"></div></div><div id="course-header"></div></div></div></div></header>
+
+        <div id="page-content" class="row">
+            <div id="region-main-box" class="col-xs-12">
+                <section id="region-main">
+                    <div class="card card-block">
+                    <span class="notifications" id="user-notifications"></span>
+                    <div role="main"><span id="maincontent"></span><h2>Instruções iniciais - Organização do projeto</h2><div class="box generalbox center clearfix p-y-1"><div class="no-overflow"><p></p><p>SCRUM MASTER:</p><p></p><ul><li>Criar repositório no github<br></li><li>Adicionar os integrantes do grupo como colaborador do repositório (Basta entrar na pagina do repositório &gt; Settings &gt;&nbsp; Collaborators )</li><li>Criar board no Trello</li><li>Adicionar os integrantes no board e dar permissão para editar</li><li>Criar 5 colunas:&nbsp;</li></ul><p></p><p>Backlog Produto (todos os requisitos do projeto, separados em tarefas/cards)</p><p>Backlog Sprint (tarefas da sprint atual)</p><p>TO DO (tarefas que já podem ser executadas<span style="font-size: 1rem;">)</span></p><p><span style="font-size: 1rem;">DOING (tarefas que estão sendo executadas)<br></span></p><p><span style="font-size: 1rem;">DONE (tarefas finalizadas)</span></p><p><ul><li>Adicionar todos os requisitos do projeto, 1 card para cada tarefa.</li></ul><p><br></p><p>DEV TEAM:</p><p><ul><li>Criar conta no github e aceitar convite para ser colaborador do repositório do projeto</li><li>Criar conta no trello, aceitar convite para participar do board.</li></ul></p><p><br></p></p><p><br></p><p>&nbsp; &nbsp;</p><p><br></p><br><p></p></div></div><div class="modified">Última atualização: segunda, 13 Ago 2018, 19:12</div></div>
+                    <div class="m-t-2 m-b-1">
+<div class="row">
+    <div class="col-md-4">        <div class="pull-left">
+                <a href="https://digitalhousebr.tucampus.org/mod/resource/view.php?id=1422&forceview=1" id="prev-activity-link" class=""  classes="btn btn-link"  title="Grupos - Projeto Integrador" >&#x25C4; Grupos - Projeto Integrador</a>
+
+        </div>
+</div>
+    <div class="col-md-4">        <div class="mdl-align">
+            <div class="urlselect">
+    <form method="post" action="https://digitalhousebr.tucampus.org/course/jumpto.php" class="form-inline" id="url_select_f5b860a3b31a0413">
+        <input type="hidden" name="sesskey" value="cBZHUD5JjW">
+            <label for="jump-to-activity" class="sr-only">
+                Seguir para...
+            </label>
+        <select id="jump-to-activity"  id="jump-to-activity" class="custom-select urlselect" name="jump">
+                    <option value="" selected>Seguir para...</option>
+                    <option value="/mod/forum/view.php?id=577&amp;forceview=1" >Avisos</option>
+                    <option value="/mod/folder/view.php?id=818&amp;forceview=1" >MENTORIA DE CARREIRA</option>
+                    <option value="/mod/folder/view.php?id=1177&amp;forceview=1" >Dicas de acessibilidade</option>
+                    <option value="/mod/page/view.php?id=1180&amp;forceview=1" >Podcasts para seguir</option>
+                    <option value="/mod/page/view.php?id=1290&amp;forceview=1" >Estrutura básica HTML</option>
+                    <option value="/mod/resource/view.php?id=819&amp;forceview=1" >Aula 0</option>
+                    <option value="/mod/resource/view.php?id=820&amp;forceview=1" >Calendário de Aulas</option>
+                    <option value="/mod/resource/view.php?id=1032&amp;forceview=1" >Organização de Pastas</option>
+                    <option value="/mod/resource/view.php?id=882&amp;forceview=1" >Aula 01 - Introdução a HTML e CSS</option>
+                    <option value="/mod/resource/view.php?id=883&amp;forceview=1" >Aula 01 - Lista de Exercícios</option>
+                    <option value="/mod/folder/view.php?id=1027&amp;forceview=1" >Resolução - Exercícios - Aula 01</option>
+                    <option value="/mod/resource/view.php?id=950&amp;forceview=1" >Aula 02 - Rotas no HTML</option>
+                    <option value="/mod/resource/view.php?id=951&amp;forceview=1" >Aula 02 - Lista de Exercícios</option>
+                    <option value="/mod/folder/view.php?id=1034&amp;forceview=1" > Resolução - Exercícios - Aula 02</option>
+                    <option value="/mod/resource/view.php?id=1012&amp;forceview=1" >Aula 03 - Semântica e Formulários</option>
+                    <option value="/mod/resource/view.php?id=1013&amp;forceview=1" >Aula 03 - Lista de Exercícios</option>
+                    <option value="/mod/folder/view.php?id=1166&amp;forceview=1" >Resolução - Exercícios  - Aula 03</option>
+                    <option value="/mod/resource/view.php?id=1056&amp;forceview=1" >Aula 04 - Semântica II e box model</option>
+                    <option value="/mod/resource/view.php?id=1057&amp;forceview=1" >Aula 04 - Lista de Exercicios</option>
+                    <option value="/mod/folder/view.php?id=1172&amp;forceview=1" > Resolução - Exercícios - Aula 04</option>
+                    <option value="/mod/resource/view.php?id=1123&amp;forceview=1" >Aula 05</option>
+                    <option value="/mod/resource/view.php?id=1124&amp;forceview=1" >Aula 05 - Exercícios</option>
+                    <option value="/mod/folder/view.php?id=1173&amp;forceview=1" >Resolução - Exercícios - Aula 05</option>
+                    <option value="/mod/resource/view.php?id=1155&amp;forceview=1" >Aula 06 - Mobile First</option>
+                    <option value="/mod/resource/view.php?id=1156&amp;forceview=1" >Aula 06 - Exercícios</option>
+                    <option value="/mod/folder/view.php?id=1174&amp;forceview=1" >Resolução - Exercícios - Aula 06</option>
+                    <option value="/mod/resource/view.php?id=1219&amp;forceview=1" >Aula 07 - Tabelas, Menu e Pseudoelementos</option>
+                    <option value="/mod/resource/view.php?id=1220&amp;forceview=1" >Aula 07 - Material do Exercício</option>
+                    <option value="/mod/folder/view.php?id=1306&amp;forceview=1" >Resolução - Exercício - Aula 07</option>
+                    <option value="/mod/resource/view.php?id=1277&amp;forceview=1" >Aula 08 - Bootstrap</option>
+                    <option value="/mod/resource/view.php?id=1278&amp;forceview=1" >Exercício - Aula 08</option>
+                    <option value="/mod/resource/view.php?id=1279&amp;forceview=1" >Exercício - Resolvido</option>
+                    <option value="/mod/resource/view.php?id=1281&amp;forceview=1" >Tutorial Bootstrap</option>
+                    <option value="/mod/folder/view.php?id=1326&amp;forceview=1" >Resolução - Exercício - Aula 08</option>
+                    <option value="/mod/resource/view.php?id=1327&amp;forceview=1" >Exemplo - Tabela</option>
+                    <option value="/mod/resource/view.php?id=1323&amp;forceview=1" >Aula 09 - Slide</option>
+                    <option value="/mod/url/view.php?id=1351&amp;forceview=1" >Por que você precisa aprender GIT?</option>
+                    <option value="/mod/resource/view.php?id=1370&amp;forceview=1" >Aula 10 - Slide</option>
+                    <option value="/mod/page/view.php?id=1502&amp;forceview=1" >Guia Prático de GIT</option>
+                    <option value="/mod/resource/view.php?id=1412&amp;forceview=1" >Sprints - Projeto Integrador</option>
+                    <option value="/mod/resource/view.php?id=1422&amp;forceview=1" >Grupos - Projeto Integrador</option>
+                    <option value="/mod/page/view.php?id=1511&amp;forceview=1" >LINKS UTEIS</option>
+                    <option value="/mod/url/view.php?id=1423&amp;forceview=1" >Como funciona o PHP</option>
+                    <option value="/mod/resource/view.php?id=1448&amp;forceview=1" >Aula 12 - Slide</option>
+                    <option value="/mod/resource/view.php?id=1449&amp;forceview=1" >Aula 12- exercicios</option>
+                    <option value="/mod/page/view.php?id=1537&amp;forceview=1" >Primeiros passos - PHP</option>
+                    <option value="/mod/resource/view.php?id=1666&amp;forceview=1" >Resolução - Exercicios</option>
+                    <option value="/mod/resource/view.php?id=1543&amp;forceview=1" >Aula 13 - Condicional</option>
+                    <option value="/mod/resource/view.php?id=1544&amp;forceview=1" >Exercícios - Aula 13</option>
+                    <option value="/mod/resource/view.php?id=1604&amp;forceview=1" >Resolução - Exercícios</option>
+                    <option value="/mod/resource/view.php?id=1602&amp;forceview=1" >Aula 14 - Loops</option>
+                    <option value="/mod/resource/view.php?id=1603&amp;forceview=1" >Aula 14 - Exercícios</option>
+                    <option value="/mod/resource/view.php?id=1605&amp;forceview=1" >Exercicios resolvidos</option>
+                    <option value="/mod/resource/view.php?id=1640&amp;forceview=1" >Aula 15 - Funções</option>
+                    <option value="/mod/resource/view.php?id=1643&amp;forceview=1" >Aula 15 - Exercícios</option>
+                    <option value="/mod/folder/view.php?id=1691&amp;forceview=1" >Resolução - Exercicios</option>
+                    <option value="/mod/resource/view.php?id=1694&amp;forceview=1" >Aula 16 - Protocolos e Métodos</option>
+                    <option value="/mod/resource/view.php?id=1695&amp;forceview=1" >Aula 16 - Exercícios</option>
+                    <option value="/mod/resource/view.php?id=1719&amp;forceview=1" >assets.zip</option>
+                    <option value="/mod/resource/view.php?id=1720&amp;forceview=1" >registro.php</option>
+                    <option value="/mod/resource/view.php?id=1722&amp;forceview=1" >Aula 17 - Exercícios</option>
+                    <option value="/mod/resource/view.php?id=1734&amp;forceview=1" >Aula 17 - Slide - PDF</option>
+                    <option value="/mod/resource/view.php?id=1748&amp;forceview=1" >Exercício 17 - Resolvido</option>
+                    <option value="/mod/resource/view.php?id=1743&amp;forceview=1" >Aula 18 - Arquivos</option>
+                    <option value="/mod/resource/view.php?id=1744&amp;forceview=1" >Aula 18 - Exercícios</option>
+                    <option value="/mod/resource/view.php?id=1749&amp;forceview=1" >registro.php</option>
+                    <option value="/mod/resource/view.php?id=1750&amp;forceview=1" >Aula 18 - live code</option>
+        </select>
+            <noscript>
+                <input type="submit" class="btn btn-secondary" value="Vai">
+            </noscript>
+    </form>
+</div>
+
+        </div>
+</div>
+    <div class="col-md-4">        <div class="pull-right">
+                <a href="https://digitalhousebr.tucampus.org/mod/page/view.php?id=1511&forceview=1" id="next-activity-link" class=""  classes="btn btn-link"  title="LINKS UTEIS" >LINKS UTEIS &#x25BA;</a>
+
+        </div>
+</div>
+</div>
+</div>
+                    
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    
+            <div id="nav-drawer" data-region="drawer" class="hidden-print moodle-has-zindex closed" aria-hidden="true" tabindex="-1">
+                <ul class="list-group">
+                                <li class="list-group-item list-group-item-action " data-key="coursehome">
+                                    <a href="https://digitalhousebr.tucampus.org/course/view.php?id=13">
+                                        <span class="text m-l-0">0718FSPCN03O</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item list-group-item-action " data-key="participants">
+                                    <a href="https://digitalhousebr.tucampus.org/user/index.php?id=13">
+                                        <span class="text m-l-0">Participantes</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item list-group-item-action " data-key="badgesview">
+                                    <a href="https://digitalhousebr.tucampus.org/badges/view.php?type=2&amp;id=13">
+                                        <span class="text m-l-0">Emblemas</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item list-group-item-action " data-key="competencies">
+                                    <a href="https://digitalhousebr.tucampus.org/admin/tool/lp/coursecompetencies.php?courseid=13">
+                                        <span class="text m-l-0">Competências</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item list-group-item-action " data-key="grades">
+                                    <a href="https://digitalhousebr.tucampus.org/grade/report/index.php?id=13">
+                                        <span class="text m-l-0">Notas</span>
+                                    </a>
+                                </li>
+                        </ul>
+                        <ul class="list-group">
+                                <li class="list-group-item list-group-item-action " data-key="myhome">
+                                    <a href="https://digitalhousebr.tucampus.org/my/">
+                                        <span class="text m-l-0">Painel</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item list-group-item-action " data-key="home">
+                                    <a href="https://digitalhousebr.tucampus.org/?redirect=0">
+                                        <span class="text m-l-0">Página inicial do site</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item list-group-item-action " data-key="calendar">
+                                    <a href="https://digitalhousebr.tucampus.org/calendar/view.php?view=month&amp;course=13">
+                                        <span class="text m-l-0">Calendário</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item list-group-item-action " data-key="privatefiles">
+                                    <a href="https://digitalhousebr.tucampus.org/user/files.php">
+                                        <span class="text m-l-0">Arquivos privados</span>
+                                    </a>
+                                </li>
+                            <li class="list-group-item" data-key="mycourses">
+                                <a class="m-l-0" href="javascrpit:void(0);">
+                                    <span class="text">Meus cursos</span>
+                                </a>
+                                <ul>
+                                            <li class="list-group-item list-group-item-action " data-key="13">
+                                                <a class="list-group-item list-group-item-action " href="https://digitalhousebr.tucampus.org/course/view.php?id=13">
+                                                    <span class="text">0718FSPCN03O</span>
+                                                </a>
+                                            </li>
+                                </ul>
+                            </li>
+                </ul>
+            </div>
+    </div>
+    
+<div id="top-footer" class="container-fluid">
+    <div class="row-fluid">
+        <div class="col-md-7 contact">
+            <h3>Manter contato</h3>
+            <h4>Conecti.me</h4>
+            <ul>
+                
+                
+                
+            </ul>
+        </div>
+        <div class="col-md-5 social">
+          <ul>
+
+
+
+
+
+          </ul>
+        </div>
+    </div>
+</div>
+
+  <footer id="page-footer" class="p-y-1">
+      <div class="container-fluid">
+          <div id="course-footer"></div>
+
+
+          <div class="madewithmoodle">
+              <p>Orgulhosamente feito com</p>
+              <a href="https://moodle.org"><img src="https://digitalhousebr.tucampus.org/theme/moove/pix/moodle-logo-white.png" alt="Moodle logo"></a>
+          </div>
+
+          <div class="madeby">
+              <p>Feito com <i class="text-danger fa fa-heart"></i> por <a href="http://conecti.me">conecti.me</a></p>
+          </div>
+
+          <nav class="nav navbar-nav hidden-lg-up">
+                  <ul class="list-unstyled p-t-1">
+                  </ul>
+          </nav>
+          
+      </div>
+  </footer>
+
+<script type="text/javascript">
+//<![CDATA[
+var require = {
+    baseUrl : 'https://digitalhousebr.tucampus.org/lib/requirejs.php/1522247947/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://digitalhousebr.tucampus.org/lib/javascript.php/1522247947/lib/jquery/jquery-3.2.1.min',
+        jqueryui: 'https://digitalhousebr.tucampus.org/lib/javascript.php/1522247947/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'https://digitalhousebr.tucampus.org/lib/javascript.php/1522247947/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script type="text/javascript" src="https://digitalhousebr.tucampus.org/lib/javascript.php/1522247947/lib/requirejs/require.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+require(['core/first'], function() {
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "https://digitalhousebr.tucampus.org/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage("pt-BR",{
+ "Play": "Tocar",
+ "Pause": "Pausar",
+ "Current Time": "Tempo",
+ "Duration Time": "Duração",
+ "Remaining Time": "Tempo Restante",
+ "Stream Type": "Tipo de Stream",
+ "LIVE": "AO VIVO",
+ "Loaded": "Carregado",
+ "Progress": "Progresso",
+ "Fullscreen": "Tela Cheia",
+ "Non-Fullscreen": "Tela Normal",
+ "Mute": "Mudo",
+ "Unmute": "Habilitar Som",
+ "Playback Rate": "Velocidade",
+ "Subtitles": "Legendas",
+ "subtitles off": "Sem Legendas",
+ "Captions": "Anotações",
+ "captions off": "Sem Anotações",
+ "Chapters": "Capítulos",
+ "You aborted the media playback": "Você parou a execução do vídeo.",
+ "A network error caused the media download to fail part-way.": "Um erro na rede fez o vídeo parar parcialmente.",
+ "The media could not be loaded, either because the server or network failed or because the format is not supported.": "O vídeo não pode ser carregado, ou porque houve um problema com sua rede ou pelo formato do vídeo não ser suportado.",
+ "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "A execução foi interrompida por um problema com o vídeo ou por seu navegador não dar suporte ao seu formato.",
+ "No compatible source was found for this media.": "Não foi encontrada fonte de vídeo compatível."
+});
+
+    });
+});;
+
+require(['jquery', 'message_popup/message_popover_controller'], function($, controller) {
+    var container = $('#nav-message-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+require(['jquery', 'message_popup/notification_popover_controller'], function($, controller) {
+    var container = $('#nav-notification-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+        require(['jquery'], function($) {
+            $('#jump-to-activity').change(function() {
+                $('#url_select_f5b860a3b31a0413').submit();
+            });
+        });
+    ;
+
+require(['theme_boost/loader']);
+require(['theme_boost/drawer'], function(mod) {
+    mod.init();
+});
+
+require([], function() {
+    var iconsearch = document.querySelector('.moove-search-input .icon-magnifier');
+    var btnclosesearch = document.querySelector('.search-input-form .close-search');
+    var searchinputform = document.querySelector('.moove-search-input');
+
+    if (iconsearch) {
+
+        var togglesearchinputform = function() {
+            searchinputform.classList.toggle('expanded');
+        }
+
+        iconsearch.onclick = togglesearchinputform;
+        btnclosesearch.onclick = togglesearchinputform;
+    }
+});
+
+;
+require(["core/notification"], function(amd) { amd.init(5474, []); });;
+require(["core/log"], function(amd) { amd.setConfig({"level":"trace"}); });
+});
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima atualiza\u00e7\u00e3o","name":"Nome","error":"Erro","info":"Informa\u00e7\u00e3o","yes":"Sim","no":"N\u00e3o","cancel":"Cancelar","confirm":"Confirmar","areyousure":"Voc\u00ea tem certeza?","closebuttontitle":"Fechar","unknownerror":"Erro desconhecido"},"repository":{"type":"Tipo","size":"Tamanho","invalidjson":"palavra JSON inv\u00e1lida","nofilesattached":"Nenhum arquivo anexado","filepicker":"Seletor de arquivos","logout":"Sair","nofilesavailable":"Nenhum arquivo dispon\u00edvel","norepositoriesavailable":"Desculpe, nenhum dos seus reposit\u00f3rios atuais pode retornar arquivos no formato solicitado.","fileexistsdialogheader":"Arquivo existe","fileexistsdialog_editor":"Um arquivo com este nome j\u00e1 foi anexado ao texto que voc\u00ea est\u00e1 editando","fileexistsdialog_filemanager":"Um arquivo com este nome j\u00e1 foi anexado","renameto":"Renomear para \"{$a}\"","referencesexist":"H\u00e1 {$a} arquivos pseud\u00f4nimos\/atalhos que usam este arquivo como fonte","select":"Selecione"},"admin":{"confirmdeletecomments":"Voc\u00ea est\u00e1 prestes a excluir coment\u00e1rios, tem certeza?","confirmation":"Confirma\u00e7\u00e3o"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"pt-br"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random5b860a3b31a0414'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random5b860a3b31a0414'); });
+})();
+//]]>
+</script>
+
+    
+    </body>
+    </html>
